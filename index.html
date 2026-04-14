@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>happy birthday</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --black:#000;
+  --gray:#e5e5e5;
+  --light:#f7f7f7;
+  --white:#fff;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Playfair Display SC', serif;
+  background:var(--white);
+  color:#1a1a1a;
+  font-size:0.9rem;
+}
+
+/* HEADER */
+header{
+  padding:60px 20px 40px;
+  text-align:center;
+  background:linear-gradient(180deg,#fff 0%,#f2f2f2 100%);
+  border-bottom:1px solid var(--gray);
+}
+
+.header-inner{
+  max-width:600px;
+  margin:auto;
+}
+
+.title{
+  font-family:'Pinyon Script', cursive;
+  font-size:clamp(3rem,7vw,4.5rem);
+  margin:0;
+}
+
+.subtitle{
+  font-size:1.2rem;
+  opacity:.7;
+}
+
+/* MAIN */
+main{
+  max-width:700px;
+  margin:auto;
+  padding:24px 16px 60px;
+}
+
+.card{
+  background:var(--light);
+  border:1px solid var(--gray);
+  border-radius:18px;
+  padding:18px;
+  margin:18px 0;
+}
+
+h2{
+  font-size:1.2rem;
+  margin-bottom:10px;
+}
+
+/* TICKER */
+.ticker-wrap{
+  overflow:hidden;
+  border:1px dashed var(--gray);
+  background:#fff;
+  border-radius:14px;
+  padding:10px;
+}
+
+.ticker-track{
+  display:flex;
+  gap:28px;
+  white-space:nowrap;
+  animation:tickerMove 28s linear infinite;
+}
+
+.ticker-wrap:hover .ticker-track{
+  animation-play-state:paused;
+}
+
+@keyframes tickerMove{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+
+/* SONG */
+iframe{
+  width:100%;
+  height:160px;
+  border:none;
+  border-radius:12px;
+}
+
+/* LETTER */
+.letter-box{
+  background:#fff;
+  border:1px solid var(--gray);
+  border-radius:16px;
+  padding:18px;
+  font-size:0.9rem;
+}
+
+/* ENVELOPES */
+.envelopes{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:10px;
+}
+
+.envelope{
+  background:#fff;
+  border:1px solid var(--gray);
+  border-radius:14px;
+  padding:14px;
+  cursor:pointer;
+}
+
+.letter{
+  display:none;
+  margin-top:10px;
+  font-size:0.85rem;
+}
+
+/* 100 THINGS */
+.jokes{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:10px;
+}
+
+.joke{
+  background:#fff;
+  border:1px solid var(--gray);
+  border-radius:12px;
+  padding:10px;
+  font-size:0.8rem;
+}
+
+/* COUNTER */
+.countup{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:nowrap;
+}
+
+.tile{
+  background:#fff;
+  border:1px solid var(--gray);
+  border-radius:14px;
+  padding:12px;
+  min-width:90px;
+  text-align:center;
+}
+
+.num{
+  font-size:1.4rem;
+  font-weight:700;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  font-size:0.75rem;
+  opacity:.6;
+  margin:30px 0;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <h1 class="title">Doğum Günün Kutlu Olsun</h1>
+    <p class="subtitle"> est. 10ᵗʰ june 2006 | sid's umay </p>
+  </div>
+</header>
+
+<main>
+
+<!-- SLIDER -->
+<section class="card">
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>canımın içi</span>
+      <span>benim güzel kızım</span>
+      <span>değerli aşkım</span>
+      <span>en iyi arkadaşım</span>
+
+      <span>benim deham</span>
+      <span>benim aptal bebeğim</span>
+      <span>sen bir mücevhersin</span>
+      <span>bir tanem</span>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTER -->
+<section class="card">
+  <h8>—𝐒𝐈𝐍𝐂𝐄 "𝐇𝐀𝐏𝐏𝐘 𝐀𝐍𝐍𝐈𝐕𝐄𝐑𝐒𝐀𝐑𝐘, 𝐖𝐄'𝐕𝐄 𝐁𝐄𝐄𝐍 𝐁𝐄𝐒𝐓 𝐅𝐑𝐈𝐄𝐍𝐃𝐒 𝐈𝐍 𝐌𝐘 𝐇𝐄𝐀𝐃 𝐅𝐎𝐑 𝐀 𝐘𝐄𝐀𝐑 𝐍𝐎𝐖!"
+ </h8>
+  <div class="countup">
+    <div class="tile"><span class="num" id="daysCount">0</span><br>days</div>
+    <div class="tile"><span class="num" id="weeksCount">0</span><br>weeks</div>
+    <div class="tile"><span class="num" id="monthsCount">0</span><br>months</div>
+  </div>
+</section>
+
+<!-- SONG -->
+<section class="card">
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/7uv632EkfwYhXoqf8rhYrg?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</section>
+
+<!-- LETTER -->
+<section class="card">
+  <h2>dearest umay,</h2>
+  <div class="letter-box">
+    <p> you are so special and dear to my heart. I only wish the best of this world for you; your biggest dreams and desires, I hope they all come to your life soon. You are one of a kind. We are so alike yet opposite and so unstoppable. You really are the bestest friend that happened to me. I love you. Count the stars, look at how big the universe is, that’s how much I love you. You are my miracle, my sweetest dream. My star, I am so grateful for you. You’re magical, Umay. I admire you so so so much. Te amo, always. I wish you the
+Happiest Birthday ever.</p>
+  </div>
+</section>
+
+<!-- OPEN WHEN -->
+<section class="card">
+  <h2>open when</h2>
+  <div class="envelopes">
+    <div class="envelope">
+      <h3>you feel overwhelmed (tap to open) </h3>
+      <div class="letter">you’ve made it through everything so far. you will again.</div>
+    </div>
+    <div class="envelope">
+      <h3>you doubt yourself (tap to open)</h3>
+      <div class="letter">you are far more capable than you realise.</div>
+    </div>
+    <div class="envelope">
+      <h3>you miss me (tap to open)</h3>
+      <div class="letter">i’m right here. i always have been.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 100 THINGS -->
+<section class="card">
+  <h2>100 things i love about you</h2>
+  <div class="jokes">
+    <div class="joke">1. i love your presence </div>
+    <div class="joke">2. i love your energy</div>
+    <div class="joke">3. i love your personality</div>
+    <div class="joke">4. i love your taste in music</div>
+    <div class="joke">5. i love your honesty</div>
+    <div class="joke">6. i love your nerdy interests</div>
+    <div class="joke">7. i love your intelligence</div>
+    <div class="joke">8. i love your kindness</div>
+    <div class="joke">9. i love the depth in your soul</div>
+    <div class="joke">10. i love when youre bipolar</div>
+
+    <div class="joke">11. i love the way you listen</div>
+    <div class="joke">12. i love the way you understand</div>
+    <div class="joke">13. i love your patience</div>
+    <div class="joke">14. i love your curiosity</div>
+    <div class="joke">15. i love when you give me tips to be more evil</div>
+    <div class="joke">16. i love your perspective</div>
+    <div class="joke">17. i love your calmness</div>
+    <div class="joke">18. i love when youre problematic</div>
+    <div class="joke">19. i love your fashion sense</div>
+    <div class="joke">20. i love your obsession with the ghosts band</div>
+
+    <div class="joke">21. i love your nose</div>
+    <div class="joke">22. i love when youre right</div>
+    <div class="joke">23. i love when youre wrong</div>
+    <div class="joke">24. i love when youre sweet</div>
+    <div class="joke">25. i love when youre mean</div>
+    <div class="joke">26. i love when you love me</div>
+    <div class="joke">27. i love when you hate me</div>
+    <div class="joke">28. i love your obsession with being funny</div>
+    <div class="joke">29. i love your confidence</div>
+    <div class="joke">30. i love your stupid jokes</div>
+
+    <div class="joke">31. i love when youre nice to me</div>
+    <div class="joke">32. i love when you bully me</div>
+    <div class="joke">33. your silly dog memes</div>
+    <div class="joke">34. i love your humour</div>
+    <div class="joke">35. i love when you educate me on turkic culture</div>
+    <div class="joke">36. i love when you let me educate you on my niche interests</div>
+    <div class="joke">37. i love when you inspire me</div>
+    <div class="joke">38. i love when you admire me</div>
+    <div class="joke">39. i love your dedication to your academics</div>
+    <div class="joke">40. i love your discipline</div>
+
+    <div class="joke">41. i love when you agree with my theories</div>
+    <div class="joke">42. i love when we get ptsd from the same songs</div>
+    <div class="joke">43. i love your doomed yuri lore</div>
+    <div class="joke">44. i love your opinions on religion</div>
+    <div class="joke">45. i love your appreciation for cinema</div>
+    <div class="joke">46. i love your appreciation for art & literature</div>
+    <div class="joke">47. i love when you help me pick my outfits</div>
+    <div class="joke">48. i love how you carry yourself</div>
+    <div class="joke">49. i love how you make my life brighter</div>
+    <div class="joke">50. i love your creative slanders</div>
+
+    <div class="joke">51. i love how brave you are</div>
+    <div class="joke">52. i love how wise you are</div>
+    <div class="joke">53. i love when you trust me with your themes</div>
+    <div class="joke">54. i love how you have 88 billion exes</div>
+    <div class="joke">55. i love the sweet names you call me</div>
+    <div class="joke">56. i love when youre happy</div>
+    <div class="joke">57. i love how you find beauty in everything</div>
+    <div class="joke">58. i love your ability to stay</div>
+    <div class="joke">59. i love when you try to mirror my coolness</div>
+    <div class="joke">60. i love your mindset</div>
+
+    <div class="joke">61. i love your ambition</div>
+    <div class="joke">62. i love our deep conversations</div>
+    <div class="joke">63. i love how clever you are</div>
+    <div class="joke">64. i love when you let me know pieces of you</div>
+    <div class="joke">65. i love your love for change</div>
+    <div class="joke">66. i love your unpredictability</div>
+    <div class="joke">67. i love your love for animals</div>
+    <div class="joke">68. i love how deeply you connect with myths & epics</div>
+    <div class="joke">69. i love how influential you are</div>
+    <div class="joke">70. i love how quick you read people</div>
+
+    <div class="joke">71. i love how careful you are</div>
+    <div class="joke">72. i love your hyperfixation on yaoi</div>
+    <div class="joke">73. i love your hyperfixation on yuri </div>
+    <div class="joke">74. i love your questions</div>
+    <div class="joke">75. i love your answers</div>
+    <div class="joke">76. i love your way of expressing</div>
+    <div class="joke">77. i love your superiority complex</div>
+    <div class="joke">78. i love how you know exactly who you are</div>
+    <div class="joke">79. i love when you participate in my tomfoolery</div>
+    <div class="joke">80. i love when we personify alphabets & numbers together</div>
+
+    <div class="joke">81. i love when youre a total genius</div>
+    <div class="joke">82. i love when youre a total narcissist</div>
+    <div class="joke">83. your perfection in your own way</div>
+    <div class="joke">84. your presence in memories</div>
+    <div class="joke">85. your presence in silence</div>
+    <div class="joke">86. your consistency with me</div>
+    <div class="joke">87. your growth over time</div>
+    <div class="joke">88. your ability to change</div>
+    <div class="joke">89. your ability to stay the same</div>
+    <div class="joke">90. your effort</div>
+
+    <div class="joke">91. your intention</div>
+    <div class="joke">92. your honesty with yourself</div>
+    <div class="joke">93. your way of thinking</div>
+    <div class="joke">94. i love thinking about you</div>
+    <div class="joke">95. i love your place in my life</div>
+    <div class="joke">96. i love missing you</div>
+    <div class="joke">97. i love how much i love you</div>
+    <div class="joke">98. i love everything about you</div>
+    <div class="joke">99. i love loving you</div>
+    <div class="joke">100. i love you</div>
+  </div>
+</section>
+
+<!-- MILESTONE -->
+<section class="card">
+  <h2>the milestone</h2>
+  <div class="countup">
+    <div class="tile"><span class="num">∞</span><br>memories</div>
+    <div class="tile"><span class="num">1</span><br>you</div>
+    <div class="tile"><span class="num">∞</span><br>impact</div>
+  </div>
+</section>
+
+</main>
+
+<footer>made with love</footer>
+
+<script>
+// envelopes
+document.querySelectorAll(".envelope").forEach(e=>{
+  e.onclick=()=>{
+    const l=e.querySelector(".letter");
+    l.style.display=l.style.display==="block"?"none":"block";
+  }
+});
+
+// counter
+const start = new Date("2025-06-26");
+
+function updateCounter(){
+  const now = new Date();
+  const diff = now - start;
+
+  const days = Math.floor(diff / (1000*60*60*24));
+  const weeks = Math.floor(days/7);
+
+  let months =
+    (now.getFullYear()-start.getFullYear())*12 +
+    (now.getMonth()-start.getMonth());
+
+  if(now.getDate()<start.getDate()) months--;
+
+  document.getElementById("daysCount").textContent = days;
+  document.getElementById("weeksCount").textContent = weeks;
+  document.getElementById("monthsCount").textContent = months;
+}
+
+updateCounter();
+setInterval(updateCounter,1000);
+</script>
+
+</body>
+</html>

@@ -400,89 +400,134 @@ Happiest Birthday ever.</p>
 <section class="card">
   <h2>how well do you know us?</h2>
 
+  <style>
+    .quiz-box{
+      background:#fff;
+      border:1px solid var(--gray);
+      border-radius:14px;
+      padding:12px;
+      margin:12px 0;
+    }
+
+    .quiz-option{
+      background:#f9f9f9;
+      border:1px solid var(--gray);
+      border-radius:10px;
+      padding:8px;
+      margin:6px 0;
+      cursor:pointer;
+      transition:0.2s;
+    }
+
+    .quiz-option:hover{
+      background:#f1f1f1;
+    }
+
+    .quiz-response{
+      margin-top:6px;
+      font-size:0.85rem;
+      opacity:.8;
+      padding-left:6px;
+    }
+
+    summary{
+      cursor:pointer;
+      list-style:none;
+    }
+
+    summary::-webkit-details-marker{
+      display:none;
+    }
+  </style>
+
   <!-- Q1 -->
-  <details>
-    <summary><b>1. when did we first become "us"?</b></summary>
-
+  <div class="quiz-box">
     <details>
-      <summary>june 2025</summary>
-      <p>okay fine you actually care</p>
-    </details>
+      <summary><b>1. when did we first become "us"?</b></summary>
 
-    <details>
-      <summary>yesterday</summary>
-      <p>??? be serious</p>
-    </details>
+      <details class="quiz-option">
+        <summary>june 2025</summary>
+        <div class="quiz-response">okay fine you actually care</div>
+      </details>
 
-    <details>
-      <summary>you forgot</summary>
-      <p>this is embarrassing for you</p>
-    </details>
+      <details class="quiz-option">
+        <summary>yesterday</summary>
+        <div class="quiz-response">??? be serious</div>
+      </details>
 
-    <details>
-      <summary>since forever</summary>
-      <p>dramatic but i respect it</p>
-    </details>
+      <details class="quiz-option">
+        <summary>you forgot</summary>
+        <div class="quiz-response">this is embarrassing for you</div>
+      </details>
 
-    <p style="margin-top:8px; opacity:.6;">scroll ↓ for next question</p>
-  </details>
+      <details class="quiz-option">
+        <summary>since forever</summary>
+        <div class="quiz-response">dramatic but i respect it</div>
+      </details>
+    </details>
+  </div>
 
   <!-- Q2 -->
-  <details>
-    <summary><b>2. what am i to you?</b></summary>
-
+  <div class="quiz-box">
     <details>
-      <summary>just a friend</summary>
-      <p>wow. friendzoned.</p>
-    </details>
+      <summary><b>2. what am i to you?</b></summary>
 
-    <details>
-      <summary>your favourite person</summary>
-      <p>correct. obviously.</p>
-    </details>
+      <details class="quiz-option">
+        <summary>just a friend</summary>
+        <div class="quiz-response">wow. friendzoned.</div>
+      </details>
 
-    <details>
-      <summary>a problem</summary>
-      <p>accurate but rude</p>
-    </details>
+      <details class="quiz-option">
+        <summary>your favourite person</summary>
+        <div class="quiz-response">correct. obviously.</div>
+      </details>
 
-    <details>
-      <summary>your soulmate</summary>
-      <p>relax a little</p>
-    </details>
+      <details class="quiz-option">
+        <summary>a problem</summary>
+        <div class="quiz-response">accurate but rude</div>
+      </details>
 
-    <p style="margin-top:8px; opacity:.6;">scroll ↓</p>
-  </details>
+      <details class="quiz-option">
+        <summary>your soulmate</summary>
+        <div class="quiz-response">relax a little</div>
+      </details>
+    </details>
+  </div>
 
   <!-- Q3 -->
-  <details>
-    <summary><b>3. what do we do best?</b></summary>
-
+  <div class="quiz-box">
     <details>
-      <summary>argue</summary>
-      <p>we do argue a lot</p>
-    </details>
+      <summary><b>3. what do we do best?</b></summary>
 
-    <details>
-      <summary>overthink</summary>
-      <p>true but incomplete</p>
-    </details>
+      <details class="quiz-option">
+        <summary>argue</summary>
+        <div class="quiz-response">we do argue a lot</div>
+      </details>
 
-    <details>
-      <summary>be insane</summary>
-      <p>valid</p>
-    </details>
+      <details class="quiz-option">
+        <summary>overthink</summary>
+        <div class="quiz-response">true but incomplete</div>
+      </details>
 
-    <details>
-      <summary>all of the above</summary>
-      <p>finally you used your brain</p>
-    </details>
+      <details class="quiz-option">
+        <summary>be insane</summary>
+        <div class="quiz-response">valid</div>
+      </details>
 
-    <details style="margin-top:10px;">
-      <summary><b>see final verdict</b></summary>
-      <p>you survived. whether you passed or not is between you and god.</p>
+      <details class="quiz-option">
+        <summary>all of the above</summary>
+        <div class="quiz-response">finally you used your brain</div>
+      </details>
+
+      <details class="quiz-box" style="margin-top:10px;">
+        <summary><b>final verdict</b></summary>
+        <div class="quiz-response">
+          you survived. whether you passed or not is between you and god.
+        </div>
+      </details>
+
     </details>
-  </details>
+  </div>
 
 </section>
 
